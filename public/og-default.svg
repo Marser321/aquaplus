@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Aqua plus Systems drinking water purification">
+  <defs>
+    <radialGradient id="glow" cx="66%" cy="42%" r="52%">
+      <stop offset="0%" stop-color="#55d8c3" stop-opacity=".9"/>
+      <stop offset="42%" stop-color="#55d8c3" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#07152d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#07152d"/>
+      <stop offset="58%" stop-color="#0a2743"/>
+      <stop offset="100%" stop-color="#051020"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity=".45">
+    <circle cx="840" cy="180" r="8" fill="#e6f4f4"/>
+    <circle cx="920" cy="292" r="14" fill="#e6f4f4"/>
+    <circle cx="1010" cy="228" r="6" fill="#e6f4f4"/>
+    <circle cx="785" cy="368" r="10" fill="#e6f4f4"/>
+    <circle cx="1080" cy="390" r="20" fill="#e6f4f4"/>
+  </g>
+  <text x="72" y="110" fill="#55d8c3" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">AQUA+ SYSTEMS</text>
+  <text x="72" y="255" fill="#e6f4f4" font-family="Arial, sans-serif" font-size="76" font-weight="700">Drinking water</text>
+  <text x="72" y="340" fill="#e6f4f4" font-family="Arial, sans-serif" font-size="76" font-weight="700">reengineered</text>
+  <text x="72" y="424" fill="#55d8c3" font-family="Arial, sans-serif" font-size="76" font-weight="700">molecule by molecule</text>
+  <text x="76" y="520" fill="#c9d5d8" font-family="Arial, sans-serif" font-size="28">Reverse osmosis + remineralization + electrolytic ionization</text>
+</svg>

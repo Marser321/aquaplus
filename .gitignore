@@ -1,0 +1,51 @@
+# Dependencies
+node_modules
+.pnpm-store
+.pnp.*
+
+# Next.js
+.next
+out
+build
+dist
+
+# Testing
+coverage
+playwright-report
+.lighthouseci
+
+# Misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env*.local
+!.env.example
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Sentry
+.sentryclirc
+
+# Artefactos del proyecto (capturas, recordings, lighthouse reports)
+docs/artifacts/*
+!docs/artifacts/.gitkeep

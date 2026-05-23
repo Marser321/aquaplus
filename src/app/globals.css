@@ -1,0 +1,519 @@
+@import "tailwindcss";
+
+/* =============================================================================
+ * Aqua+ Systems · Design Tokens v1.1 (Kinetic Cinematic con paleta brand real)
+ * Fuente de verdad: docs/UI-SPEC.md (recalibrado 2026-05-22, D-17)
+ * Cero hex/rgb hardcoded fuera de este archivo.
+ * =============================================================================
+ */
+
+@theme {
+  /* ---------- Surfaces · navy dominante ---------- */
+  --color-bg-base: oklch(13% 0.05 260); /* navy abisal · Hero, secciones WebGL */
+  --color-bg-elevated: oklch(20% 0.06 260); /* navy medio · cards, calculadora, CTA */
+  --color-bg-paper: oklch(96% 0.005 220); /* sección comparativa pH/ORP · contraste invertido */
+  --color-bg-warm: oklch(92% 0.04 80); /* franja arena para endorsement */
+  --color-bg-overlay: oklch(0% 0 0 / 0.65);
+
+  /* ---------- Text ---------- */
+  --color-fg-primary: oklch(96% 0.005 220); /* blanco perla */
+  --color-fg-secondary: oklch(80% 0.01 220);
+  --color-fg-muted: oklch(65% 0.01 220); /* +3% vs v1.0 por contraste sobre navy */
+  --color-fg-on-accent: oklch(12% 0.05 260); /* navy oscuro sobre teal accent */
+  --color-fg-inverted: oklch(15% 0.05 260); /* texto en bg-paper o bg-warm */
+
+  /* ---------- Brand · navy + teal del logo Aqua+ Systems ---------- */
+  --color-accent-primary: oklch(72% 0.13 175); /* teal/menta del drop + del `+` */
+  --color-accent-hover: oklch(78% 0.13 175);
+  --color-accent-active: oklch(65% 0.13 175);
+  --color-accent-subtle: oklch(72% 0.13 175 / 0.15);
+  --color-accent-glow: oklch(72% 0.15 175 / 0.55);
+
+  --color-brand-navy: oklch(35% 0.13 260); /* navy del tipográfica "Aqua" / "SYSTEMS" */
+  --color-brand-navy-soft: oklch(45% 0.1 260);
+
+  /* ---------- Accent secundario · arena cálida (endorsement clínico) ---------- */
+  --color-warm-primary: oklch(82% 0.06 80);
+  --color-warm-strong: oklch(70% 0.1 70);
+  --color-warm-subtle: oklch(82% 0.06 80 / 0.18);
+
+  /* ---------- Accent terciario · oro mineral (Conversión) ---------- */
+  --color-mineral-gold: oklch(78% 0.14 90);
+  --color-mineral-subtle: oklch(78% 0.14 90 / 0.2);
+
+  /* ---------- Data tokens · indicadores científicos (ComparisonTable pH/ORP/TDS) ---------- */
+  --color-data-acidic: oklch(64% 0.2 25); /* rojo/naranja · pH bajo, oxidante */
+  --color-data-neutral: oklch(75% 0.12 140); /* verde · pH neutro */
+  --color-data-alkaline: var(--color-accent-primary); /* teal · pH alcalino */
+  --color-data-antioxidant: oklch(78% 0.14 90); /* mineral · ORP negativo */
+  --color-data-warn: oklch(82% 0.18 80); /* amarillo · TDS alto */
+
+  /* ---------- Semantic ---------- */
+  --color-success: oklch(72% 0.16 150);
+  --color-warning: oklch(80% 0.14 70);
+  --color-danger: oklch(64% 0.2 25);
+  --color-info: var(--color-accent-primary);
+
+  /* ---------- Borders ---------- */
+  --color-border-subtle: oklch(28% 0.04 260);
+  --color-border-strong: oklch(42% 0.06 260);
+  --color-border-accent: var(--color-accent-primary);
+  --color-border-on-paper: oklch(85% 0.005 220);
+
+  /* ---------- Typography (vars de next/font cargadas en layout.tsx) ---------- */
+  --font-display:
+    var(--font-geist-sans), "Söhne Breit", "Aeonik", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-geist-sans), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "Berkeley Mono", "JetBrains Mono", ui-monospace, monospace;
+
+  --text-nano: 0.5625rem; /* 9px · badges flotantes 3D tags */
+  --text-micro: 0.625rem; /* 10px · valores de tablas científicas, delta indicators */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.333rem;
+  --text-2xl: 1.777rem;
+  --text-3xl: 2.369rem;
+  --text-4xl: 3.157rem;
+  --text-5xl: 4.209rem;
+  --text-6xl: 5.61rem;
+  --text-7xl: 7.478rem;
+
+  --leading-heading: 1.05;
+  --leading-tight: 1.2;
+  --leading-body: 1.6;
+  --leading-loose: 1.8;
+
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.06em;
+  --tracking-data: 0.02em;
+
+  /* ---------- Spacing ---------- */
+  --spacing: 0.25rem; /* base 4px de Tailwind v4 */
+
+  /* ---------- Containers ---------- */
+  --container-narrow: 720px;
+  --container-content: 1200px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-pill: 9999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.2);
+  --shadow-md: 0 4px 12px oklch(0% 0 0 / 0.3);
+  --shadow-lg: 0 12px 40px oklch(0% 0 0 / 0.4);
+  --shadow-glow: 0 0 36px var(--color-accent-glow);
+
+  /* ---------- Motion ---------- */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-page: 600ms;
+  --duration-cinematic: 900ms;
+  --duration-storytelling: 1400ms;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-cinematic: cubic-bezier(0.7, 0, 0.3, 1);
+  --ease-fluid: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+/* =============================================================================
+ * Base reset y defaults globales
+ * =============================================================================
+ */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  /* Lenis maneja scroll suave; desactivar el nativo cuando esté activo */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  html.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  html.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-fg-primary);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: var(--leading-heading);
+    letter-spacing: var(--tracking-tighter);
+  }
+
+  /* Datos científicos con tabular nums */
+  .font-mono,
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: var(--tracking-data);
+  }
+
+  /* Focus visible global */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-accent-subtle);
+    color: var(--color-fg-primary);
+  }
+}
+
+/* =============================================================================
+ * Reduced motion · first-class (D-05)
+ * =============================================================================
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =============================================================================
+ * Utility classes específicas del proyecto
+ * =============================================================================
+ */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .glow-cyan {
+    text-shadow: 0 0 24px var(--color-accent-glow);
+  }
+
+  .container-content {
+    width: 100%;
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .story-copy-shell {
+    position: relative;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-2xl);
+    padding: clamp(1.5rem, 3.5vw, 2.5rem);
+    background: color-mix(in oklch, var(--color-bg-elevated) 82%, transparent);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow:
+      var(--shadow-lg),
+      inset 0 1px 0 oklch(100% 0 0 / 0.08),
+      0 0 40px oklch(0% 0 0 / 0.5);
+    transition:
+      border-color var(--duration-base) var(--ease-standard),
+      box-shadow var(--duration-base) var(--ease-standard),
+      transform var(--duration-base) var(--ease-standard);
+  }
+
+  .story-copy-shell:hover {
+    border-color: color-mix(in oklch, var(--color-border-subtle) 40%, var(--color-accent-primary));
+    box-shadow:
+      var(--shadow-lg),
+      0 16px 48px oklch(0% 0 0 / 0.6),
+      0 0 30px oklch(72% 0.13 175 / 0.08);
+  }
+
+  .story-copy-shell-right {
+    transition:
+      border-color var(--duration-base) var(--ease-standard),
+      box-shadow var(--duration-base) var(--ease-standard),
+      transform var(--duration-base) var(--ease-standard);
+  }
+
+  .story-copy-shell-right:hover {
+    border-color: color-mix(in oklch, var(--color-border-subtle) 40%, var(--color-mineral-gold));
+    box-shadow:
+      var(--shadow-lg),
+      0 16px 48px oklch(0% 0 0 / 0.6),
+      0 0 30px oklch(78% 0.14 90 / 0.08);
+  }
+
+  .section-readable-scrim {
+    background:
+      radial-gradient(
+        circle at 72% 48%,
+        transparent 0%,
+        transparent 35%,
+        color-mix(in oklch, var(--color-bg-base) 45%, transparent) 80%
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in oklch, var(--color-bg-base) 75%, transparent) 0%,
+        color-mix(in oklch, var(--color-bg-base) 35%, transparent) 50%,
+        transparent 100%
+      );
+  }
+
+  .section-readable-scrim-right {
+    background:
+      radial-gradient(
+        circle at 28% 48%,
+        transparent 0%,
+        transparent 35%,
+        color-mix(in oklch, var(--color-bg-base) 45%, transparent) 80%
+      ),
+      linear-gradient(
+        270deg,
+        color-mix(in oklch, var(--color-bg-base) 75%, transparent) 0%,
+        color-mix(in oklch, var(--color-bg-base) 35%, transparent) 50%,
+        transparent 100%
+      );
+  }
+
+  @media (min-width: 768px) {
+    .container-content {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .story-copy-shell,
+    .story-copy-shell-right {
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-xl);
+      margin-inline: 0;
+      background: color-mix(in oklch, var(--color-bg-elevated) 88%, transparent);
+      box-shadow: 0 12px 40px oklch(0% 0 0 / 0.5);
+      padding: 1.5rem;
+    }
+
+    .section-readable-scrim,
+    .section-readable-scrim-right {
+      background: linear-gradient(
+        180deg,
+        color-mix(in oklch, var(--color-bg-base) 60%, transparent) 0%,
+        transparent 30%,
+        transparent 70%,
+        color-mix(in oklch, var(--color-bg-base) 70%, transparent) 100%
+      );
+    }
+  }
+
+  /* Custom premium sliders */
+  .premium-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: var(--color-border-subtle);
+    border-radius: var(--radius-pill);
+    outline: none;
+    transition: background var(--duration-fast) var(--ease-standard);
+  }
+
+  .premium-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--color-border-subtle);
+    border-radius: var(--radius-pill);
+    border: none;
+  }
+
+  .premium-slider::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--color-bg-base);
+    border: 2.5px solid var(--color-accent-primary);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7.5px;
+    box-shadow:
+      0 0 10px var(--color-accent-glow),
+      var(--shadow-sm);
+    transition:
+      transform var(--duration-fast) var(--ease-spring),
+      border-color var(--duration-fast),
+      background-color var(--duration-fast);
+  }
+
+  .premium-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: var(--color-accent-primary);
+    border-color: var(--color-fg-primary);
+  }
+
+  .premium-slider::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--color-border-subtle);
+    border-radius: var(--radius-pill);
+    border: none;
+  }
+
+  .premium-slider::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--color-bg-base);
+    border: 2.5px solid var(--color-accent-primary);
+    cursor: pointer;
+    box-shadow:
+      0 0 10px var(--color-accent-glow),
+      var(--shadow-sm);
+    transition:
+      transform var(--duration-fast) var(--ease-spring),
+      border-color var(--duration-fast),
+      background-color var(--duration-fast);
+  }
+
+  .premium-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    background: var(--color-accent-primary);
+    border-color: var(--color-fg-primary);
+  }
+
+  /* Glassmorphic elements */
+  .glass-premium {
+    background: color-mix(in oklch, var(--color-bg-elevated) 65%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border-subtle);
+    box-shadow:
+      var(--shadow-lg),
+      inset 0 1px 0 oklch(100% 0 0 / 0.05);
+    transition:
+      border-color var(--duration-base) var(--ease-standard),
+      box-shadow var(--duration-base) var(--ease-standard);
+  }
+
+  .glass-premium:hover {
+    border-color: color-mix(in oklch, var(--color-border-subtle) 40%, var(--color-accent-primary));
+    box-shadow:
+      var(--shadow-lg),
+      0 0 20px color-mix(in oklch, var(--color-accent-primary) 15%, transparent);
+  }
+
+  /* =========================================================================
+   * Card system canónico · 3 patrones (B.1 refactor de refinements pre-launch)
+   * Reemplaza paddings/radius ad-hoc en Stage*, Calculator, LeadForm, EQ.
+   * =========================================================================
+   */
+
+  /* Glass card · OutputCard, EndorsementQuote portrait/quote, LeadForm success */
+  .card-glass {
+    background: color-mix(in oklch, var(--color-bg-elevated) 65%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-2xl);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    box-shadow:
+      var(--shadow-md),
+      inset 0 1px 0 oklch(100% 0 0 / 0.05);
+    transition:
+      border-color var(--duration-base) var(--ease-standard),
+      box-shadow var(--duration-base) var(--ease-standard);
+  }
+
+  /* Stat card · pH / TDS / ORP / cluster / alignment live boxes */
+  .card-stat {
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 1.25rem;
+    background: color-mix(in oklch, var(--color-bg-base) 45%, transparent);
+  }
+
+  /* Quote card · endorsement quotes en stages (4 apariciones) */
+  .card-quote {
+    border-left: 4px solid var(--color-accent-primary);
+    border-right: 1px solid var(--color-border-subtle);
+    border-top: 1px solid var(--color-border-subtle);
+    border-bottom: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 1.25rem 1.5rem;
+    background: color-mix(
+      in oklch,
+      var(--color-accent-primary) 6%,
+      color-mix(in oklch, var(--color-bg-base) 80%, transparent)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .card-quote--warm {
+    border-left-color: var(--color-mineral-gold);
+    background: color-mix(
+      in oklch,
+      var(--color-mineral-gold) 6%,
+      color-mix(in oklch, var(--color-bg-base) 80%, transparent)
+    );
+  }
+
+  /* Sliders · focus-visible explícito (C.1 a11y fix) */
+  input[type="range"].premium-slider:focus-visible {
+    outline: none;
+  }
+  input[type="range"].premium-slider:focus-visible::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 3px var(--color-bg-base),
+      0 0 0 5px var(--color-accent-primary),
+      var(--shadow-sm);
+  }
+  input[type="range"].premium-slider:focus-visible::-moz-range-thumb {
+    box-shadow:
+      0 0 0 3px var(--color-bg-base),
+      0 0 0 5px var(--color-accent-primary),
+      var(--shadow-sm);
+  }
+}

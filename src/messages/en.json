@@ -1,0 +1,224 @@
+{
+  "_meta": {
+    "locale": "en-US",
+    "owner": "Aqua+ Systems · Florida",
+    "description": "Default V1 copy strings. Mirror of es.json. Quotes signed by Denis Blanco (clinical endorsement)."
+  },
+  "nav": {
+    "process": "The process",
+    "calculator": "My savings",
+    "endorsement": "Clinical endorsement",
+    "contact": "Free analysis"
+  },
+  "hero": {
+    "eyebrow": "Advanced water purification · Florida residential",
+    "tagline": "Transforming Waters, Transforming Lives",
+    "headline_lead": "The water you drink at home,",
+    "headline_accent": "reengineered",
+    "headline_tail": "molecule by molecule.",
+    "subtitle": "Three coordinated stages: precision reverse osmosis, remineralization with bioactive calcium and magnesium, and electrolytic ionization with dissolved hydrogen. No bottled-water spend. No recurring plastic.",
+    "cta_primary": "Schedule free analysis",
+    "cta_secondary": "See the process"
+  },
+  "marquee": {
+    "terms": [
+      "PFAS",
+      "Microplastics",
+      "Heavy metals",
+      "Chlorine",
+      "Molecular hydrogen · H₂",
+      "Negative ORP",
+      "Alkaline pH",
+      "Bioactive minerals",
+      "Reverse osmosis",
+      "Electrolysis",
+      "Cellular hydration",
+      "Antioxidant water"
+    ]
+  },
+  "stages": {
+    "osmosis": {
+      "phase_label": "Stage 1 · Reverse Osmosis",
+      "headline": "Nanometric blockade of PFAS, heavy metals and microplastics.",
+      "lede": "A semipermeable membrane with 0.1 nm pores retains up to 99.99% of dissolved contaminants from Florida tap water.",
+      "endorsement_quote": "Miami-Dade tap water carries PFAS, lead and microplastics in ranges that compromise cellular function. Sub-nanometer rejection is non-negotiable before remineralization.",
+      "milestone_metric_label": "Rejection rate",
+      "milestones": {
+        "pfas": {
+          "title": "PFAS forever chemicals · stopped",
+          "rejection": "99.99%",
+          "description": "Targets PFAS regulated in the low-ppt range, including the EPA 2024 4.0 ppt limits for PFOA and PFOS."
+        },
+        "metals": {
+          "title": "Heavy metals · stopped",
+          "rejection": "99.97%",
+          "description": "Lead, mercury, arsenic, copper. Anything heavier than a water molecule stays in the rejection stream."
+        },
+        "microplastics": {
+          "title": "Microplastics · stopped",
+          "rejection": "99.95%",
+          "description": "Polymer fragments above 0.1 nm bounce off the membrane. The water that passes is molecularly pure."
+        }
+      }
+    },
+    "conversion": {
+      "phase_label": "Stage 2 · Reverse Conversion",
+      "headline": "Controlled bioactive remineralization.",
+      "lede": "Purified water passes through beds of organic calcium and magnesium. Conductivity returns, pH balances, taste comes back.",
+      "endorsement_quote": "Pure RO water leaches minerals from the body. Returning bioavailable calcium and magnesium turns demineralized water back into a useful drink.",
+      "equation_label": "Reverse conversion · balanced equation",
+      "metric_ph_label": "pH · live",
+      "metric_tds_label": "TDS · live"
+    },
+    "molecular": {
+      "phase_label": "Stage 3 · Electrolysis & Ionization",
+      "headline": "Controlled molecular dissociation.",
+      "lede": "Water flows through a cell with platinum-coated titanium electrodes. Electric current partially dissociates the water molecules, releasing dissolved hydrogen and increasing hydroxyl ion concentration.",
+      "endorsement_quote": "Electrolysis through platinum-titanium cells generates dissolved hydrogen — not ozone, not chlorine. The process is clinically benign and biochemically active.",
+      "equation_label": "Crystalline geometry · magnetic alignment",
+      "metric_cluster_label": "Cluster size · live",
+      "metric_alignment_label": "Alignment · live"
+    },
+    "ionization": {
+      "phase_label_hydra": "Stage 4A · pH Balance",
+      "phase_label_def": "Stage 4B · Antioxidant Potential (ORP)",
+      "headline_hydra": "Naturally balanced alkaline water.",
+      "lede_hydra": "The controlled concentration of hydroxyl ions stably elevates the pH, helping to neutralize dietary acidity and promoting biological absorption.",
+      "headline_def": "Molecular hydrogen as a reducing agent.",
+      "lede_def": "Dissolved hydrogen (H₂) acts as a selective antioxidant, helping to neutralize reactive oxygen species and combating oxidative stress at the cellular level.",
+      "equation_title_hydra": "Cathodic half-reaction · hydrogen release",
+      "equation_title_def": "Cellular neutralization · free radical scavenging",
+      "indicator_hydra": "H₂ dissolved · live",
+      "indicator_def": "Antioxidant shield · live",
+      "metric_orp_label": "ORP · live",
+      "endorsement_quote": "An ORP under −300 mV with 0.8–1.2 ppm of dissolved H₂ is the only profile I've seen consistently lower oxidative markers in routine bloodwork."
+    }
+  },
+  "endorsement_quote_hero": {
+    "tag": "Clinical nutrition endorsement",
+    "quote": "I've measured the antioxidant water from Aqua+ Systems in dozens of patients. Cellular hydration improves where bottled water failed. Drinking water starts to be therapy.",
+    "attribution_name": "Denis Blanco",
+    "attribution_role": "Clinical Nutritionist · Miami"
+  },
+  "comparison": {
+    "eyebrow": "Science of the drop · independently measurable",
+    "headline": "What you actually see when you compare your current water to ours.",
+    "badge_optimal": "Optimal",
+    "columns": {
+      "sample": "Water sample",
+      "ph": "pH",
+      "orp": "ORP (mV)",
+      "tds": "TDS (mg/L)",
+      "effect": "Primary biological effect"
+    },
+    "samples": {
+      "tap_florida": {
+        "label": "Florida tap water",
+        "effect": "Oxidant · may contain PFAS, chlorine, microplastics"
+      },
+      "bottled": {
+        "label": "Commercial bottled",
+        "effect": "Slightly acidic or oxidizing · no active minerals after prolonged storage"
+      },
+      "ro_pure": {
+        "label": "Pure reverse osmosis",
+        "effect": "Strongly demineralized · flat taste, acidic leaching"
+      },
+      "remineralized": {
+        "label": "Remineralized (reverse conversion)",
+        "effect": "Balanced pH, soft taste · no scale buildup"
+      },
+      "ionized_aqua": {
+        "label": "Ionized Aqua+ Systems",
+        "effect": "Antioxidant · dissolved molecular hydrogen · high hydration, optimal pH"
+      },
+      "acidic_external": {
+        "label": "External acidic Aqua+",
+        "effect": "Natural sanitizer · astringent · topical external use only"
+      }
+    },
+    "disclaimer": "Values are typical ranges measured under stable operating conditions. Individual chemistry depends on your inlet water and equipment maintenance."
+  },
+  "calculator": {
+    "eyebrow": "ROI · ecological + financial impact",
+    "headline": "Calculate your yearly savings + plastic footprint avoided.",
+    "label_people": "People in your household",
+    "label_monthly_spend": "Current monthly spend on bottled water (USD)",
+    "output_savings": "Estimated yearly savings",
+    "output_savings_delta": "vs. current bottled-water spend",
+    "output_bottles": "Plastic bottles avoided / year",
+    "output_bottles_delta": "≈ {trucks} pickup-truck loads",
+    "output_carbon": "Carbon footprint avoided (kgCO₂eq / year)",
+    "output_carbon_delta": "≈ {trees} trees planted",
+    "disclaimer": "Approximate calculation based on Florida averages. Actual savings depend on your usage and current supplier."
+  },
+  "lead_form": {
+    "eyebrow": "Free home analysis · Florida service area",
+    "headline": "Schedule your free at-home water chemical analysis.",
+    "lede": "A certified technician visits your Florida home, analyzes your tap water and delivers a personalized diagnosis. No purchase commitment.",
+    "label_name": "Full name",
+    "label_email": "Email",
+    "label_phone": "Phone",
+    "label_address": "Address",
+    "label_zip": "ZIP code",
+    "consent": "I authorize Aqua+ Systems to contact me to schedule the at-home analysis.",
+    "submit": "Request free analysis",
+    "submitting": "Sending your request…",
+    "success_title": "Request received.",
+    "success_lede": "We'll call you within the next 24 business hours to coordinate.",
+    "error_zip_invalid": "That ZIP is outside our service area (State of Florida). If you live elsewhere, write to us at hello@aquaplussystems.com.",
+    "error_generic": "We couldn't confirm your request. Please try again in a moment.",
+    "error_required": "Required field",
+    "error_name": "Please enter your full name (2–80 characters)",
+    "error_email": "Please enter a valid email address",
+    "error_phone": "Please enter a valid US phone number",
+    "error_address": "Please enter your full street address",
+    "error_consent": "We need your consent to schedule the visit"
+  },
+  "cta": {
+    "eyebrow": "Aqua+ Systems · the complete equipment",
+    "headline_a": "Three stages in one cabinet.",
+    "headline_accent": "One installation.",
+    "headline_b": "A lifetime of clean water.",
+    "subtitle": "A certified technician installs the system at your Florida home. Free water analysis, no purchase commitment, full diagnostic the same day.",
+    "tag_3d": "Live 3D assembly",
+    "tag_3d_pause": "Auto-rotate",
+    "cta_secondary": "See the process"
+  },
+  "footer": {
+    "tagline": "Advanced purification and mineral balance technology for the water you drink every day. Residential service across the entire State of Florida.",
+    "rights": "Aqua Plus Systems LLC. All rights reserved.",
+    "col_company_title": "Company",
+    "col_science_title": "The science",
+    "col_science_links": {
+      "osmosis": "Reverse Osmosis",
+      "conversion": "Reverse Conversion",
+      "ionization": "Electrolytic Ionization"
+    },
+    "col_legal_title": "Legal",
+    "col_legal_links": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "clinical": "Clinical disclaimer"
+    },
+    "col_contact_title": "Contact",
+    "col_contact_links": {
+      "free_analysis": "Free analysis"
+    },
+    "service_area_title": "Florida service area",
+    "service_area_counties": [
+      "Miami-Dade",
+      "Broward",
+      "Palm Beach",
+      "Monroe",
+      "Orange",
+      "Hillsborough",
+      "Pinellas"
+    ],
+    "service_area_disclaimer": "Coverage across all Florida ZIP codes for at-home analysis and installation."
+  },
+  "a11y": {
+    "canvas_description": "Interactive 3D visualization of the Aqua+ Systems three-stage purification process — purely decorative, not required to understand the page."
+  },
+  "disclaimer_not_pool": "Aqua+ Systems is a drinking-water purification system for residential use. We do not provide pool services, recreational chlorination, or climate control."
+}

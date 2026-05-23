@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aqua plus Systems icon">
+  <rect width="64" height="64" rx="16" fill="#07152d"/>
+  <path d="M32 10c8 9 16 19 16 29 0 9-7 15-16 15s-16-6-16-15c0-10 8-20 16-29z" fill="#55d8c3"/>
+  <path d="M32 20v24M20 32h24" stroke="#07152d" stroke-width="5" stroke-linecap="round"/>
+</svg>
