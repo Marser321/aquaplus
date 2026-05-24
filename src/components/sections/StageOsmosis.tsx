@@ -107,56 +107,58 @@ export function StageOsmosis() {
         <div className="container-content grid w-full grid-cols-1 gap-12 md:grid-cols-12">
           {/* Sidebar narrativa */}
           <div className="story-copy-shell md:col-span-6 md:col-start-1">
-            <motion.span
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
-              className="mb-4 inline-block text-xs uppercase"
-              style={{
-                letterSpacing: "var(--tracking-wide)",
-                color: "var(--color-accent-primary)",
-                fontFamily: "var(--font-mono)",
-              }}
-            >
-              {t("phase_label")}
-            </motion.span>
+            <div className="story-block-soft">
+              <motion.span
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
+                className="mb-4 inline-block text-xs uppercase"
+                style={{
+                  letterSpacing: "var(--tracking-wide)",
+                  color: "var(--color-accent-primary)",
+                  fontFamily: "var(--font-mono)",
+                }}
+              >
+                {t("phase_label")}
+              </motion.span>
 
-            <motion.h2
-              id="osmosis-headline"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, ease: [0.2, 0, 0, 1] }}
-              className="mb-6 text-balance"
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(2rem, 5vw, var(--text-5xl))",
-                lineHeight: "var(--leading-heading)",
-                letterSpacing: "var(--tracking-tighter)",
-                fontWeight: 600,
-              }}
-            >
-              {t("headline")}
-            </motion.h2>
+              <motion.h2
+                id="osmosis-headline"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, ease: [0.2, 0, 0, 1] }}
+                className="mb-6 text-balance"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(2rem, 5vw, var(--text-5xl))",
+                  lineHeight: "var(--leading-heading)",
+                  letterSpacing: "var(--tracking-tighter)",
+                  fontWeight: 600,
+                }}
+              >
+                {t("headline")}
+              </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0, 0, 1] }}
-              className="mb-12 max-w-xl text-pretty"
-              style={{
-                fontSize: "var(--text-lg)",
-                lineHeight: "var(--leading-body)",
-                color: "var(--color-fg-secondary)",
-              }}
-            >
-              {t("lede")}
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0, 0, 1] }}
+                className="max-w-xl text-pretty md:mb-12"
+                style={{
+                  fontSize: "var(--text-lg)",
+                  lineHeight: "var(--leading-body)",
+                  color: "var(--color-fg-secondary)",
+                }}
+              >
+                {t("lede")}
+              </motion.p>
+            </div>
 
             {/* 3 milestones que se activan con el scroll */}
-            <ol className="space-y-6">
+            <ol className="story-block-data space-y-6">
               {MILESTONES.map((m, i) => {
                 const isActive = !reduced ? activeIndex === i : true;
                 const isPast = !reduced ? activeIndex > i : true;

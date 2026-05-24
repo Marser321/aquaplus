@@ -89,138 +89,154 @@ export function StageMolecular() {
         <div className="container-content grid w-full grid-cols-1 gap-12 md:grid-cols-12">
           {/* Sidebar */}
           <div className="story-copy-shell md:col-span-6 md:col-start-1">
-            <motion.span
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
-              className="mb-4 inline-block text-xs uppercase"
-              style={{
-                letterSpacing: "var(--tracking-wide)",
-                color: "var(--color-accent-primary)",
-                fontFamily: "var(--font-mono)",
-              }}
-            >
-              {t("phase_label")}
-            </motion.span>
-
-            <motion.h2
-              id="molecular-headline"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, ease: [0.2, 0, 0, 1] }}
-              className="mb-6 text-balance"
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(2rem, 5vw, var(--text-5xl))",
-                lineHeight: "var(--leading-heading)",
-                letterSpacing: "var(--tracking-tighter)",
-                fontWeight: 600,
-              }}
-            >
-              {t("headline")}
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0, 0, 1] }}
-              className="mb-8 max-w-xl text-pretty"
-              style={{
-                fontSize: "var(--text-lg)",
-                lineHeight: "var(--leading-body)",
-                color: "var(--color-fg-secondary)",
-              }}
-            >
-              {t("lede")}
-            </motion.p>
-
-            {/* Información cristalina */}
-            <div
-              className="mb-8 border px-5 py-4"
-              style={{
-                borderColor: "var(--color-border-subtle)",
-                borderRadius: "var(--radius-xl)",
-                backgroundColor: "color-mix(in oklch, var(--color-bg-base) 65%, transparent)",
-                fontFamily: "var(--font-mono)",
-                fontSize: "var(--text-base)",
-                letterSpacing: "var(--tracking-data)",
-                color: "var(--color-fg-primary)",
-              }}
-            >
-              <p
+            <div className="story-block-soft">
+              <motion.span
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, ease: [0.2, 0, 0, 1] }}
+                className="mb-4 inline-block text-xs uppercase"
                 style={{
-                  fontSize: "var(--text-xs)",
-                  color: "var(--color-fg-muted)",
-                  marginBottom: "0.6rem",
-                  textTransform: "uppercase",
                   letterSpacing: "var(--tracking-wide)",
+                  color: "var(--color-accent-primary)",
+                  fontFamily: "var(--font-mono)",
                 }}
               >
-                {t("equation_label")}
-              </p>
-              <p style={{ lineHeight: 1.5 }}>
-                {"Hexagonal Ring Structuring: "}
-                <span style={{ color: "var(--color-accent-primary)" }}>(H₂O)₆</span>
-                {" arrangement"}
-              </p>
+                {t("phase_label")}
+              </motion.span>
+
+              <motion.h2
+                id="molecular-headline"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, ease: [0.2, 0, 0, 1] }}
+                className="mb-6 text-balance"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(2rem, 5vw, var(--text-5xl))",
+                  lineHeight: "var(--leading-heading)",
+                  letterSpacing: "var(--tracking-tighter)",
+                  fontWeight: 600,
+                }}
+              >
+                {t("headline")}
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.2, 0, 0, 1] }}
+                className="max-w-xl text-pretty md:mb-8"
+                style={{
+                  fontSize: "var(--text-lg)",
+                  lineHeight: "var(--leading-body)",
+                  color: "var(--color-fg-secondary)",
+                }}
+              >
+                {t("lede")}
+              </motion.p>
             </div>
 
-            {/* Cluster size + Alignment live · usa .card-stat canónico */}
-            <div className="card-stat mb-10 grid grid-cols-2 gap-6">
-              <div>
+            <div className="story-block-data mb-10">
+              {/* Información cristalina */}
+              <div
+                className="mb-8 border px-5 py-4"
+                style={{
+                  borderColor: "var(--color-border-subtle)",
+                  borderRadius: "var(--radius-xl)",
+                  backgroundColor: "color-mix(in oklch, var(--color-bg-base) 65%, transparent)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "var(--text-base)",
+                  letterSpacing: "var(--tracking-data)",
+                  color: "var(--color-fg-primary)",
+                }}
+              >
                 <p
                   style={{
-                    fontFamily: "var(--font-mono)",
                     fontSize: "var(--text-xs)",
                     color: "var(--color-fg-muted)",
-                    letterSpacing: "var(--tracking-wide)",
+                    marginBottom: "0.6rem",
                     textTransform: "uppercase",
-                    marginBottom: "0.35rem",
+                    letterSpacing: "var(--tracking-wide)",
                   }}
                 >
-                  {t("metric_cluster_label")}
+                  {t("equation_label")}
                 </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "var(--text-4xl)",
-                    color: "var(--color-accent-primary)",
-                    letterSpacing: "var(--tracking-data)",
-                    fontVariantNumeric: "tabular-nums",
-                    lineHeight: 1,
-                  }}
-                >
-                  <NumberTicker value={6} from={14} decimals={0} suffix=" H₂O" driveBy={progress} />
+                <p style={{ lineHeight: 1.5 }}>
+                  {"Hexagonal Ring Structuring: "}
+                  <span style={{ color: "var(--color-accent-primary)" }}>(H₂O)₆</span>
+                  {" arrangement"}
                 </p>
               </div>
-              <div>
-                <p
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "var(--text-xs)",
-                    color: "var(--color-fg-muted)",
-                    letterSpacing: "var(--tracking-wide)",
-                    textTransform: "uppercase",
-                    marginBottom: "0.35rem",
-                  }}
-                >
-                  {t("metric_alignment_label")}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "var(--text-4xl)",
-                    color: "var(--color-accent-primary)",
-                    letterSpacing: "var(--tracking-data)",
-                    fontVariantNumeric: "tabular-nums",
-                    lineHeight: 1,
-                  }}
-                >
-                  <NumberTicker value={99.8} from={0} decimals={1} suffix="%" driveBy={progress} />
-                </p>
+
+              {/* Cluster size + Alignment live · usa .card-stat canónico */}
+              <div className="card-stat grid grid-cols-2 gap-6">
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "var(--text-xs)",
+                      color: "var(--color-fg-muted)",
+                      letterSpacing: "var(--tracking-wide)",
+                      textTransform: "uppercase",
+                      marginBottom: "0.35rem",
+                    }}
+                  >
+                    {t("metric_cluster_label")}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "var(--text-4xl)",
+                      color: "var(--color-accent-primary)",
+                      letterSpacing: "var(--tracking-data)",
+                      fontVariantNumeric: "tabular-nums",
+                      lineHeight: 1,
+                    }}
+                  >
+                    <NumberTicker
+                      value={6}
+                      from={14}
+                      decimals={0}
+                      suffix=" H₂O"
+                      driveBy={progress}
+                    />
+                  </p>
+                </div>
+                <div>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "var(--text-xs)",
+                      color: "var(--color-fg-muted)",
+                      letterSpacing: "var(--tracking-wide)",
+                      textTransform: "uppercase",
+                      marginBottom: "0.35rem",
+                    }}
+                  >
+                    {t("metric_alignment_label")}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "var(--text-4xl)",
+                      color: "var(--color-accent-primary)",
+                      letterSpacing: "var(--tracking-data)",
+                      fontVariantNumeric: "tabular-nums",
+                      lineHeight: 1,
+                    }}
+                  >
+                    <NumberTicker
+                      value={99.8}
+                      from={0}
+                      decimals={1}
+                      suffix="%"
+                      driveBy={progress}
+                    />
+                  </p>
+                </div>
               </div>
             </div>
 

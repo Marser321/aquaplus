@@ -286,6 +286,16 @@
       0 0 30px oklch(78% 0.14 90 / 0.08);
   }
 
+  /* Mobile-only sub-blocks · desktop inertes (no visual impact). Activan
+   * en @media (max-width:767px) para descomponer la supertarjeta
+   * .story-copy-shell en 3 tarjetas independientes con opacidad adaptativa
+   * por zona (soft = headline/lede, data = métricas/equation/milestones). */
+  .story-block-soft,
+  .story-block-data {
+    position: relative;
+    display: block;
+  }
+
   .section-readable-scrim {
     background:
       radial-gradient(
@@ -325,24 +335,87 @@
   }
 
   @media (max-width: 767px) {
+    /* Neutralizar la supertarjeta — los hijos .story-block-* asumen el rol visual */
     .story-copy-shell,
     .story-copy-shell-right {
-      border: 1px solid var(--color-border-subtle);
-      border-radius: var(--radius-xl);
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: 0;
+      box-shadow: none;
+      padding: 0;
+      border-radius: 0;
       margin-inline: 0;
-      background: color-mix(in oklch, var(--color-bg-elevated) 88%, transparent);
-      box-shadow: 0 12px 40px oklch(0% 0 0 / 0.5);
-      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
+    /* Bloque headline + lede · glass muy sutil, apoyado en text-shadow */
+    .story-block-soft {
+      border: 1px solid color-mix(in oklch, var(--color-border-subtle) 60%, transparent);
+      border-radius: var(--radius-xl);
+      padding: 1.25rem 1.25rem 1.5rem;
+      background: color-mix(in oklch, var(--color-bg-elevated) 28%, transparent);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 8px 28px oklch(0% 0 0 / 0.25);
+    }
+
+    .story-block-soft h2,
+    .story-block-soft h3,
+    .story-block-soft p,
+    .story-block-soft span {
+      text-shadow:
+        0 1px 2px oklch(0% 0 0 / 0.55),
+        0 2px 12px oklch(0% 0 0 / 0.4);
+    }
+
+    /* Bloque métricas / equation / milestones · glass medio, datos crisp */
+    .story-block-data {
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 1.25rem;
+      background: color-mix(in oklch, var(--color-bg-elevated) 58%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 10px 32px oklch(0% 0 0 / 0.35);
+    }
+
+    /* Quotes mobile · bajar opacidad sobre canvas */
+    .card-quote {
+      background: color-mix(
+        in oklch,
+        var(--color-accent-primary) 7%,
+        color-mix(in oklch, var(--color-bg-base) 60%, transparent)
+      );
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .card-quote--warm {
+      background: color-mix(
+        in oklch,
+        var(--color-mineral-gold) 7%,
+        color-mix(in oklch, var(--color-bg-base) 60%, transparent)
+      );
+    }
+
+    /* Glass-premium mobile · EQ quote container, Calculator OutputCard, ComparisonTable */
+    .glass-premium {
+      background: color-mix(in oklch, var(--color-bg-elevated) 45%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* Scrim mobile · suavizado para dejar respirar el canvas */
     .section-readable-scrim,
     .section-readable-scrim-right {
       background: linear-gradient(
         180deg,
-        color-mix(in oklch, var(--color-bg-base) 60%, transparent) 0%,
-        transparent 30%,
-        transparent 70%,
-        color-mix(in oklch, var(--color-bg-base) 70%, transparent) 100%
+        color-mix(in oklch, var(--color-bg-base) 28%, transparent) 0%,
+        transparent 25%,
+        transparent 75%,
+        color-mix(in oklch, var(--color-bg-base) 35%, transparent) 100%
       );
     }
   }
